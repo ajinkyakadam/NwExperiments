@@ -1,10 +1,30 @@
+!
+! Zebra configuration saved from vty
+!   2016/08/12 16:16:36
+!
 hostname Router3
-password router3
-enable password router3
-service password-encryption
+password 8 XpDulX49PUQYc
+enable password 8 m.4DM07Ba8CAE
 log stdout
-
-
-
-
-
+service password-encryption
+!
+interface eth0
+ ipv6 nd suppress-ra
+!
+interface eth1
+ description Interface connecting router 2 at eth2
+ ip address 192.168.1.10/30
+ ipv6 nd suppress-ra
+!
+interface eth2
+ description Interface connecting router 4 at eth2
+ ip address 192.168.1.14/30
+ ipv6 nd suppress-ra
+!
+interface lo
+!
+ip forwarding
+!
+!
+line vty
+!
