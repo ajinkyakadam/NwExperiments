@@ -70,3 +70,54 @@ You will get the following output at your terminal
     Starting Quagga daemons (prio:10): zebra ospfd.
 
 From the above output you may confirm that we have started the zebra daemon and ospfd daemon successfully. 
+
+
+#### Configure Router 1
+In order to configure router 1 via the virtual terminal interface we first need to set the virtual terminal password in the zebra daemon. So please add the following lines in the file `/etc/quagga/zebra.conf`
+```
+hostname Router1
+password router1
+enable password router1
+service password-encryption
+log stdout
+```
+
+after adding the above lines please **save** the file and then run. 
+
+    sudo /etc/init.d/quagga restart 
+
+Now if you do 
+
+    telnet localhost 2601
+
+you will see the virtual terminal interface, as follows and it will prompt for the password. Provide the passsword you set above after which we will configure the router1. 
+
+If you run `show run` in priviledged mode, you can see the current configuration as 
+```
+username@router1:~$ telnet localhost 2601
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+
+Hello, this is Quagga (version 0.99.20.1).
+Copyright 1996-2005 Kunihiro Ishiguro, et al.
+
+
+User Access Verification
+
+Password: 
+Router1> enable
+Password: 
+Router1# show run
+
+Current configuration:
+!
+hostname Router1
+password 8 nkf3Ra2uYS0YY
+enable password 8 3kGy.r3/e2OCA
+log stdout
+service password-encryption
+!
+```
+
+Its easy to see that our passwords are encrypted because of `service password-encryption` command. Similarly you can configure remaining 3 routers and verify if your configuration has been added.  
