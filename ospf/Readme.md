@@ -57,6 +57,16 @@ with
 
     zebra=yes
     ospfd=yes
+    
+Now we will edit file `/etc/quagga/debian.conf` by replacing 
+
+    zebra_options=" --daemon -A 127.0.0.1"
+    ospfd_options=" --daemon -A 127.0.0.1"
+
+with
+
+    zebra_options=" --daemon -A 127.0.0.1 -P 2601 -u quagga -g quagga"
+    ospfd_options=" --daemon -A 127.0.0.1 -P 2604 -u quagga -g quagga"
 
 Now we will restart the daemon, by running
 
