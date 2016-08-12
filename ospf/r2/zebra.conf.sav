@@ -1,0 +1,9 @@
+
+hostname Router2
+password router2
+enable password router2
+service password-encryption
+log stdout
+
+
+

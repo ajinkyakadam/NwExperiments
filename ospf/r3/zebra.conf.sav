@@ -1,0 +1,10 @@
+hostname Router3
+password router3
+enable password router3
+service password-encryption
+log stdout
+
+
+
+
+

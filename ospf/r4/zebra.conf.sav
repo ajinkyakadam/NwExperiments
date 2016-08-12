@@ -1,0 +1,6 @@
+hostname Router4
+password router4
+enable password router4
+service password-encryption
+log stdout
+
