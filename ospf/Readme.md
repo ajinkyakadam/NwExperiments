@@ -133,7 +133,7 @@ service password-encryption
 Its easy to see that our passwords are encrypted because of `service password-encryption` command. Similarly you can configure remaining 3 routers and verify if your configuration has been added.  
 
 
-We added the OSPF configuration to each of the routers, we will first verify which of our routers have become Designated Routers and Backup Designated Routers. As discussed in Todd Lammle. 2014. CCNA Routing and Switching Review Guide
+We added the OSPF configuration to each of the routers, the configuration files are stored in sub-directories r1,r2,r3,r4 of this repositroy. We will first verify which of our routers have become Designated Routers and Backup Designated Routers. As discussed in Todd Lammle. 2014. CCNA Routing and Switching Review Guide
 
 > The RID is not only used to advertise routes, it’s also used to elect the designated router
 (DR) and the backup designated router (BDR)
@@ -172,5 +172,5 @@ For router4
 
 <img src="r4Neighbor.png">
 
-Careful observation of the above screenshots confirms that the results are consistent with our observation. 
+Careful observation of the above screenshots confirms that the results are consistent with our expectation. 
 
