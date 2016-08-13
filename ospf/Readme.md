@@ -144,6 +144,12 @@ and the RID is determined as
 >	2. Highest logical interface overrides a physical interface.
 >	3. The router-id overrides the interface and loopback interface.
 
+We configured each router with the following router id 
+* router1 = '1.1.1.1'
+* router2 = '1.1.1.2'
+* router3 = '1.1.1.3'
+* router4 = '1.1.1.4'
+
 So in our case the topology with DR and BDR marked will be as folllows 
 
 <img src="ospfDRBDR.png" height="250">
