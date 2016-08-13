@@ -150,7 +150,7 @@ We configured each router with the following router id
 * router3 = '1.1.1.3'
 * router4 = '1.1.1.4'
 
-So in our case the topology with DR and BDR marked will be as folllows 
+So in our topology we expect the routers to be DR and BDR as marked in the below image
 
 <img src="ospfDRBDR.png" height="250">
 
