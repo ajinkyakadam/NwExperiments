@@ -1,4 +1,4 @@
-### Implementing a Learning Switch and Adding a Flow Entry if destination MAC is known using POX
+### Implementing a Learning Switch and adding a flow entry to the switch using POX
 
 In order to start with the basics, I am using this 
 [tutorial](https://github.com/mininet/openflow-tutorial/wiki/Create-a-Learning-Switch) as it is a great starting point. 
