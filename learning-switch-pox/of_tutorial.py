@@ -88,20 +88,14 @@ class Tutorial (object):
     Implement switch-like behavior.
     """
 
-    # DELETE THIS LINE TO START WORKING ON THIS (AND THE ONE BELOW!) #
-
-    # Here's some psuedocode to start you off implementing a learning
-    # switch.  You'll need to rewrite it as real Python code.
-
-    # Learn the port for the source MAC
-
+    # Get the source and destination MAC, and also the input port 
+    # for a given packet
+	
     src_mac_addr = str(packet.src)
     dst_mac_addr = str(packet.dst)
     input_port = packet_in.in_port
-    
-   
-
-    ## The logic below learns the port for a given source mac address
+       
+    ## Add the source MAC to the correpsonding input port 
 
     if src_mac_addr not in self.mac_to_port:
 	 self.mac_to_port[src_mac_addr] = input_port
