@@ -11,11 +11,7 @@ We use the following topology for our experiment
 We are going to configure the above routers to run OSPFv2 protocol, which is a link state routing protocol based on Dijkstras algorithm. As described [here](https://en.wikipedia.org/wiki/Open_Shortest_Path_First)
 > OSPF is perhaps the most widely used interior gateway protocol (IGP) in large enterprise networks.
 
-Dijkstras algorithm is used to find shortest path from a node to all other nodes in the graph. Hence this algorithm is used in OSPF routing protocol to find shortest path from any given router to all the routers in  a network. When we use OSPF each router in a network builds its routing table based on the shortest path it has computed using Dijkstra's algorithm. OPSF routers build a topological database using all the link state advertisements and hello protocol, and this "topological database" serves as an input to the Dijkstras algorithm which then computes the shortest path. 
-
-
-In our experiment we are going to build a single area OSPF network and observe the exchange of link state updates using wireshark. We will also purposefully make one of the router go down and see how the routing tables get updated. This is going to be fun experiment and a very good starting point to do more complex experiments so stay tuned.  
-
+[Dijkstras algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) is used to find shortest path from a node to all other nodes in the graph. Hence this algorithm is used in OSPF routing protocol to find shortest path from any given router to all the routers in  a network. When we use OSPF each router in a network builds its routing table based on the shortest path it has computed using Dijkstra's algorithm. OPSF routers build a topological database using all the link state advertisements and hello protocol, and this "topological database" serves as an input to the Dijkstras algorithm which then computes the shortest path. 
 #### Install Quagga 
 
 I am using the guidelines given [here](https://wiki.ubuntu.com/JonathanFerguson/Quagga) to install Quagga, however I will be making some changes to the configuration as per our experiment. On the machines we will be only running Zebra and Ospfd daemon. All other protocol daemons will be disabled. 
@@ -133,7 +129,7 @@ service password-encryption
 Its easy to see that our passwords are encrypted because of `service password-encryption` command. Similarly you can configure remaining 3 routers and verify if your configuration has been added.  
 
 
-We added the OSPF configuration to each of the routers, we will first verify which of our routers have become Designated Routers and Backup Designated Routers. As discussed in Todd Lammle. 2014. CCNA Routing and Switching Review Guide
+We added the OSPF configuration to each of the routers, the configuration files are stored in sub-directories r1,r2,r3,r4 of this repositroy. We will first verify which of our routers have become Designated Routers and Backup Designated Routers. As discussed in Todd Lammle. 2014. CCNA Routing and Switching Review Guide
 
 > The RID is not only used to advertise routes, it’s also used to elect the designated router
 (DR) and the backup designated router (BDR)
@@ -144,7 +140,13 @@ and the RID is determined as
 >	2. Highest logical interface overrides a physical interface.
 >	3. The router-id overrides the interface and loopback interface.
 
-So in our case the topology with DR and BDR marked will be as folllows 
+We configured each router with the following router id 
+* router1 = '1.1.1.1'
+* router2 = '1.1.1.2'
+* router3 = '1.1.1.3'
+* router4 = '1.1.1.4'
+
+So in our topology we expect the routers to be DR and BDR as marked in the below image
 
 <img src="ospfDRBDR.png" height="250">
 
@@ -166,5 +168,5 @@ For router4
 
 <img src="r4Neighbor.png">
 
-Careful observation of the above screenshots confirms that the results are consistent with our observation. 
+Careful observation of the above screenshots confirms that the results are consistent with our expectation. 
 
