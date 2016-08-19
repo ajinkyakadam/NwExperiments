@@ -2,4 +2,9 @@ This repository represents a collection of all the networking experiments that I
 
 Each sub-directory represents a single experiment. All the configuration files related to that experiment are provided in that directory. Also the file `Readme.md` in each sub-directory explains what the experiment goal is and how I ran those experiments. 
 
-If you wish to see a complete list of the experiments please visit the [wiki](https://github.com/ajinkyakadam/NwExperiments/wiki)
+
+### Experiments : 
+
+* [Implement OSPFv2 using Quagga Protocol stack](https://github.com/ajinkyakadam/NwExperiments/blob/master/ospf/Readme.md)
+
+* [Implementing a Learning Switch and Adding a Flow Entry if destination MAC is known using POX](https://github.com/ajinkyakadam/NwExperiments/blob/master/learning-switch-pox/Readme.md)
