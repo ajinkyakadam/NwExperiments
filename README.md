@@ -7,4 +7,5 @@ Each sub-directory represents a single experiment. All the configuration files r
 
 * [Implement OSPFv2 using Quagga Protocol stack](https://github.com/ajinkyakadam/NwExperiments/blob/master/ospf/Readme.md)
 
-* [Implementing a Learning Switch and Adding a Flow Entry if destination MAC is known using POX](https://github.com/ajinkyakadam/NwExperiments/blob/master/learning-switch-pox/Readme.md)
+* [Implementing a Learning Switch and Adding a Flow Entry to a Software OpenFlow Switch using POX](https://github.com/ajinkyakadam/NwExperiments/blob/master/learning-switch-pox/Readme.md)
+* [Implementing a Learning Switch and Adding a Flow Entry to a Hardware OpenFlow Switch using POX](https://github.com/ajinkyakadam/NwExperiments/blob/master/implement-lswitch-hardware/Readme.md)
