@@ -88,3 +88,12 @@ I am not sure why I observe LLDP multicast packets only!! Please have a look at 
 
 What am I missing ? 
 
+Update : 
+Please refer the disucssion [here](https://groups.google.com/forum/#!searchin/geni-orca-users/Ajinkya%7Csort:relevance/geni-orca-users/XVZfbvXtPEg/MTOXcJqeEAAJ)
+
+I would be using a regular node and turning it into a software switch by loading the OVS image. I will then check if the logic works as expected and then move onto suggestion given by llya. 
+> you need to probably read up on the OpenFlow implementation for the BNT 8264. You also may want to bind your request specifically to e.g. RCI rack. 
+
+
+
+
