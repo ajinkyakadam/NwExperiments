@@ -58,7 +58,7 @@ else:
         child.expect('.+#')
         child.sendline('router ospf')
         child.expect('.+#')
-        child.sendline('router-id 1.1.1.2')
+        child.sendline('router-id 1.1.1.4')
         child.expect('.+#')
         child.sendline('network 192.168.1.0/30 area 0')
         child.expect('.+#')
