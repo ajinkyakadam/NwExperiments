@@ -4,6 +4,7 @@ Each sub-directory represents a single experiment. All the configuration files r
 
 
 ### Experiments : 
+* [Using pexpect module to configure a 4 router topology with OSPF routing protocol](https://github.com/ajinkyakadam/NwExperiments/tree/master/ospf-with-pythonscripts)
 
 * [Implement OSPFv2 using Quagga Protocol stack](https://github.com/ajinkyakadam/NwExperiments/blob/master/ospf/Readme.md)
 
