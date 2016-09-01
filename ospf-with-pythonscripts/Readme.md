@@ -77,7 +77,7 @@ From the above output you may confirm that we have started the zebra daemon and 
 
 We need to add telnet password to the zebra and ospfd daemon else we won't be able to log in to those processes. 
 On each router open the zebra.conf and ospfd.conf using any of your favorite text editors and paste the below line 
-in case of router1. For router2 it will be `password router2` and so on. 
+in case of router1. For router2 it will be `password router2` and so on. (Note the files are located in /etc/quagga/ so you will need root permissions to edit those files. )
 ```
 password router1
 ```
