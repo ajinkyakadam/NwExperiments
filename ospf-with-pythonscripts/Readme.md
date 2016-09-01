@@ -1,6 +1,6 @@
 ## Instructions to use the scripts 
 Scripts included in this directory are developed to automatically configure the below topology. Here we emulate the 4 nodes 
-as routers running OSPF protocol. 
+as routers running OSPF protocol. The nodes were reserved using the geni research testbed. You need a geni account to log in to the [portal](https://portal.geni.net/). Also you will need to have downloaded the keys from portal and placed them in your `~/.ssh/` directory. The below machines all have been booted with Ubuntu 12.04LTS
 
 <img src="geniTopology.png">
 
