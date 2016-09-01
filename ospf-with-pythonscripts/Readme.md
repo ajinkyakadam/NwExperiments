@@ -5,9 +5,23 @@ as routers running OSPF protocol. The nodes were reserved using the geni researc
 <img src="geniTopology.png">
 
 ### Pre Requisite : 
+If you are using GENI machines then you can slice details page to get the login command. 
+For instance, to login to a machine you will run the following on your terminal. (Note you will replace geni-username by your actual username.)
+```
+ssh geni-username@pc1.pks2.sdn.uky.edu -p 34618
+```
+
+
 #### Install pexpect module in python.
 I am using the pip package manager which I have 
-installed on all 4 machines. To install pexpect module run 
+installed on all 4 machines. by running 
+```
+sudo apt-get update
+sudo apt-get install -y python-pip
+```
+
+
+To install pexpect module run 
 ```
 sudo pip install pexpect
 ```
@@ -81,3 +95,39 @@ in case of router1. For router2 it will be `password router2` and so on. (Note t
 ```
 password router1
 ```
+
+### Router OSPF configuration 
+You will then copy the configuration files in this directory to each of the respective nodes. 
+For example, you will copy `router1.py` and `router1ospfprocess.py` to router1 node. The copy operation can be 
+achieved easily using `scp`. Below is an example 
+```
+scp -P PORT_NUMBER filename username@hostname:~/
+```
+If you are using GENI testbed then you can get the hostname from slice details. Below is a screen shot from the slice details page of my slice.  
+<img src="sliceDetails.png" height="250">
+
+In this case to copy the configuration scripts to router1 you will issue the following two commands. 
+```
+scp -P 34618 router1.py adk427@pc1.pks2.sdn.uky.edu:~/
+scp -P 34618 router1ospfprocess.py adk427@pc1.pks2.sdn.uky.edu:~/
+```
+
+Similarly copy all the remaining files to the respective routers. Once you are done copying the scripts, we will login in to each machine. For instance to login to router1 run 
+```
+ssh adk427@pc1.pks2.sdn.uky.edu -p 34618
+```
+Then execute both scripts, on each machine. For example on router1 you would run
+
+```
+python router1.py
+python router1ospfprocess.py
+```
+
+Thats it!!!. You have a 4 router topology running OSPF routing protocol. You can now telnet to the OSPF process on each router using 
+```
+telnet localhost 2604
+```
+
+
+
+
