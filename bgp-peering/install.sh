@@ -4,7 +4,7 @@
 sudo apt-get update
 sudo apt-get install -y vim 
 sudo apt-get install -y python-pip
-sudo pip install -y pexpect
+sudo pip install pexpect
 sudo apt-get install -y quagga 
 echo "net.ipv4.conf.all.forwarding=1" | sudo tee -a /etc/sysctl.conf 
 echo "net.ipv4.conf.default.forwarding=1" | sudo tee -a /etc/sysctl.conf
