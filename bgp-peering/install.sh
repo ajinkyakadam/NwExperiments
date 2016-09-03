@@ -2,6 +2,7 @@
 ## Script to setup quagga and install some required modules. 
 
 sudo apt-get update
+sudo apt-get install -y vim 
 sudo apt-get install -y python-pip
 sudo pip install -y pexpect
 sudo apt-get install -y quagga 
